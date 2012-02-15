@@ -41,40 +41,6 @@ class PageLayoutEditDefault extends AbstractType
                 )
             )
         );
-
-        ////
-        // advanced data
-        ////
-
-        $builder->add(
-            'html',
-            'textarea',
-            array(
-                'label' => 'HTML code',
-                'required' => false,
-                'attr' => array(
-                    "rows" => '30',
-                    'cols' => '120',
-                    'class' => 'kit-cms-advanced'
-                )
-            )
-        );
-
-        ////
-        // archived data
-        ////
-        $builder->add(
-            'backgroundColor',
-            'text',
-            array(
-                'label' => 'Background Color',
-                'required' => false,
-                'attr' => array(
-                    "class" => 'kit-cms-advanced'
-                )
-            )
-        );
-
     }
 
     public function getName() {
