@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="layout-home-column">
+    <h2 class="app-news-title">{{ ('News') | trans }}</h2>
+    {% render 'KitpagesCmsBundle:Zone:widget' with {
+        'slug': languageManager.currentLanguage|default('en') ~ '-news',
+        'renderer':'news_list',
+        'blockDisplayCount':5,
+        'authorizedBlockTemplateList':['news']
+    } %}
+   <div class="app-block-bottom-link">
+      <a class="standard-link" href="{{ path('news') }}">&gt; {{ ('See the news') | trans }}</a>
+   </div>
+</div>
+<div class="layout-home-edito">
+    {% render 'KitpagesCmsBundle:Page:widgetZone' with {'location_in_page': 'edito', 'page':kitCmsPage} %}
+</div>
+
+<div style="clear: both;"></div>
+<br/>
+
+
+
+<div style="clear:both;"></div>
+{% endblock body %}

@@ -1,6 +1,16 @@
 web/bundles/
+web/data/*
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
+app/data/*
+app/sessions/sess_*
 build/
 vendor/
+deps.lock
+app/config/parameters.ini
+*~
+# IDE
+/nbproject/
+/.idea/
+/catalog.xml

@@ -1,0 +1,15 @@
+default:
+    pattern:  /
+    defaults: { _controller: AppSiteBundle:Default:index }
+news:
+    pattern:  /{lang}/news
+    defaults: { _controller: AppSiteBundle:Default:newsList, lang: en }
+
+contact_form:
+    pattern:  /{lang}/contact
+    defaults: { _controller: AppSiteBundle:Default:contact }
+
+page_news:
+    pattern:  /{lang}/news/{kitCmsBlockSlug}
+    defaults: { _controller: AppSiteBundle:Default:news, lang: en }
+
