@@ -31,6 +31,10 @@
     float:right;
 }
 
+a img{
+    border:none;
+}
+
 .app-logo-cms{
     float:left;
 }
