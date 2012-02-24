@@ -23,7 +23,7 @@ A backup of a site demo is also available
 ---------------
 
 a) Install the Vendor Libraries
-php bin/vendors install
+php bin/vendors udpate
 
 b) Modify parameters.yml
     cp parameters.SAMPLE.yml parameters.yml
