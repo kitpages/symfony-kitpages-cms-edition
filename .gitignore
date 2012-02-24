@@ -1,9 +1,9 @@
 web/bundles/
-# web/data/*
+web/data/*
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
-# app/data/*
+app/data/*
 app/sessions/sess_*
 build/
 vendor/
