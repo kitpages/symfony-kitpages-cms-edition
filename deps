@@ -73,14 +73,6 @@
     target=/bundles/Stof/DoctrineExtensionsBundle
     version=1.0.0
 
-[DoctrineFixturesBundle]
-    git=http://github.com/symfony/DoctrineFixturesBundle.git
-    target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
-
-[DataFixturesBundle]
-    git=http://github.com/doctrine/data-fixtures.git
-    target=/bundles/DataFixtures/DataFixturesBundle
-
 [FOSUserBundle]
     git=http://github.com/FriendsOfSymfony/FOSUserBundle.git
     target=bundles/FOS/UserBundle
