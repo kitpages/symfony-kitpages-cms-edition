@@ -19,13 +19,6 @@ header {
     min-height: 400px;
 }
 
-.layout-page > header {
-    height: 195px;
-}
-.ie6 .layout-page header {
-    height: 195px;
-}
-
 .layout-main-navigation {
     margin-bottom:20px;
     height: 50px;

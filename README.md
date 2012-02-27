@@ -23,31 +23,39 @@ A backup of a site demo is also available
 ---------------
 
 a) Install the Vendor Libraries
-php bin/vendors udpate
+run the command:
+    php bin/vendors update
 
-b) Modify parameters.yml
-    cp parameters.SAMPLE.yml parameters.yml
+b) import database
+You must create a database.
+run the command:
+    php app/console kitCmsDemo:importDatabase
+    answers to questions
+
+c) Modify parameters.yml
+    run the command:
+        cp app/config/parameters.SAMPLE.yml app/config/parameters.yml
 
     edit parameters.yml
-    modify the database information
-    modify base_url
+        modify the database information
+        modify base_url
 
-c) install assets
-php app/console assets:install web
-
-d) import database
-path: app/data/dumpSql/kit_cms_demo.sql
+d) install assets
+run the command:
+    php app/console assets:install web
 
 
- publish all
+
+
+2) publish all
 -----------------------
-a) connexion
-   http://site/user/profile/login
+type the following URL
+   http://site/cms/nav/publishAll
 
+Sign in
    login:admin
    pass:admin
 
-b) go in the tree view
-    http://site/cms/tree
-    click on "Publish all pages and navigation"
+
+The site is accessible!!  http://site
 
