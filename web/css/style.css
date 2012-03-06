@@ -25,6 +25,11 @@
     opacity:1;
 }
 
+.app-header-connection {
+    float:right;
+    line-height:43px;
+}
+
 /* logo */
 
 .app-logo-kitpages{
