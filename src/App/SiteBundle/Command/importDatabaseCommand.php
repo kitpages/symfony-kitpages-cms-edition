@@ -16,11 +16,12 @@ class importDatabaseCommand extends ContainerAwareCommand
             ->addArgument('databaseLogin', InputArgument::OPTIONAL, 'the user login to the database')
             ->addArgument('databasePass', InputArgument::OPTIONAL, 'the user password to the database')
             ->addArgument('databaseHost', InputArgument::OPTIONAL, 'database host')
+            ->addArgument('importFile', InputArgument::OPTIONAL, 'run the command kitCmsDemo:importFile')
             ->setHelp(<<<EOT
 The <info>kitCmsDemo:importDatabase</info> command import a database Demonstration.
 
-<info>php app/console kitCmsDemo:importDatabase databaseName databaseLogin databasePass databaseHost</info>
-
+<info>php app/console kitCmsDemo:importDatabase databaseName databaseLogin databasePass databaseHost importFile</info>
+<info>importFile:true/false</info>
 EOT
             )
             ->setDescription('import database Demonstration')
@@ -33,6 +34,7 @@ EOT
         $databaseHost = $input->getArgument('databaseHost');
         $databaseLogin = $input->getArgument('databaseLogin');
         $databasePass = $input->getArgument('databasePass', '');
+        $importFile = $input->getArgument('importFile');
 
         $output->writeln('Import database');
         $dialog = $this->getHelperSet()->get('dialog');
@@ -55,6 +57,16 @@ EOT
         } else {
             $stringDatabasePass = ' -p'.$databasePass;
         }
-        exec('mysql -h'.$databaseHost.' -u'.$databaseLogin.$stringDatabasePass.' --compress --force '.$databaseName.' < app/data/dumpSql/kit_cms_demo.sql', $returnList, $error);
+
+        exec('mysql -h'.$databaseHost.' -u'.$databaseLogin.$stringDatabasePass.' --compress --force '.$databaseName.' < app/dataInit/dumpSql/kit_cms_demo.sql', $returnList, $error);
+
+        if (!$importFile) {
+            $importFile = $dialog->ask($output, '<info>Import the demonstration files related in the database?</info> [<comment>true</comment>]:', 'true');
+            if ($importFile == true)  {
+                $importFileCommand = $this->getApplication()->find('kitCmsDemo:importFile');
+                $returnCode = $importFileCommand->run($input, $output);
+            }
+        }
+
     }
 }
