@@ -1,5 +1,5 @@
 imports:
-    - { resource: parameters.yml }
+    - { resource: parameters.ini }
     - { resource: security.yml }
     - { resource: kitpages.yml }
 
@@ -128,3 +128,4 @@ ihqs_contact:
         database:                           # connecting the database listener
             db_driver: orm                  # giving him the database driver
         file: ~                             # connecting the file logger listener
+

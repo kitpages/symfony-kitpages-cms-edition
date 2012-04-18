@@ -26,6 +26,12 @@ EOT
     {
 
         $output->writeln('Import file');
+        if (!is_dir("app/data")) {
+            mkdir("app/data");
+        }
+        if (!is_dir("app/data/bundle")) {
+            mkdir("app/data/bundle");
+        }
         $this->recursiveCopy("app/dataInit/bundle", "app/data/bundle");
     }
 

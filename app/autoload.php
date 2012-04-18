@@ -22,6 +22,7 @@ $loader->registerNamespaces(array(
     'Kitpages'         => __DIR__.'/../vendor',
     'FOS'              => __DIR__.'/../vendor/bundles',
     'IHQS'             => __DIR__.'/../vendor/bundles',
+    'Imagine'          => __DIR__.'/../vendor/imagine/lib',
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',
@@ -50,4 +51,6 @@ AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine/lib/Doctrine/ORM/M
 // the lazy loading of the init file (which is expensive)
 require_once __DIR__.'/../vendor/swiftmailer/lib/classes/Swift.php';
 Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/lib/swift_init.php');
+// AWS SDK needs a special autoloader
+require_once __DIR__.'/../vendor/aws-sdk/sdk.class.php';
 

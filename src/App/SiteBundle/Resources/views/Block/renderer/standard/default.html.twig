@@ -1,6 +1,6 @@
 {% autoescape false %}
 <div class="app-block-standard [[cms:parameter:firstLastClass]] {{data.root.block_presentation|default('')}}">
-    {% set img = data.root.media_mainImage|default('') %}
+    {% set img = data.root.media_mainImage.0|default('') %}
     {% set imgPos = data.root.imagePosition|default('top') %}
 
     {% set youtubeId = data.root.youtubeId|default('') %}

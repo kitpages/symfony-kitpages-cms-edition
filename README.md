@@ -6,42 +6,42 @@ KitpagesCms Edition is based on Symfony Standard edition with additional the bun
 A backup of a site demo is also available
 
    Kitpages bundles added
-        - KitpagesCmsBundle
-        - KitpagesFileBundle
-        - KitpagesCacheControlBundle
-        - KitpagesSimpleCacheBundle
-        - KitpagesRedirectBundle
-        - KitpagesUtilBundle
+        * KitpagesCmsBundle
+        * KitpagesFileBundle
+        * KitpagesCacheControlBundle
+        * KitpagesSimpleCacheBundle
+        * KitpagesRedirectBundle
+        * KitpagesUtilBundle
 
    Other bundles
-        - DoctrineExtensions
-        - DoctrineExtensionsBundle
-        - FOSUserBundle
-        - IHQSContactBundle
+        * DoctrineExtensions
+        * DoctrineExtensionsBundle
+        * FOSUserBundle
+        * IHQSContactBundle
 
 1) Installation
 ---------------
 
 a) Install the Vendor Libraries
-run the command:
+* run the command:
     php bin/vendors update
 
 b) import database
-You must create a database.
-run the command:
+* You must create a database.
+* run the command:
     php app/console kitCmsDemo:importDatabase
     answers to questions
 
 c) Modify parameters.yml
-    run the command:
+    * run the command:
         cp app/config/parameters.SAMPLE.yml app/config/parameters.yml
 
-    edit parameters.yml
+    * edit parameters.yml
         modify the database information
         modify base_url
 
 d) install assets
-run the command:
+* run the command:
     php app/console assets:install web
 
 
@@ -49,10 +49,10 @@ run the command:
 
 2) publish all
 -----------------------
-type the following URL
+* type the following URL
    http://site/cms/nav/publishAll
 
-Sign in
+* Sign in
    login:admin
    pass:admin
 

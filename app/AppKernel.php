@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new App\SiteBundle\AppSiteBundle(),
             new App\UserBundle\AppUserBundle(),
             new App\LanguageBundle\AppLanguageBundle(),
+            new Kitpages\FileSystemBundle\KitpagesFileSystemBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

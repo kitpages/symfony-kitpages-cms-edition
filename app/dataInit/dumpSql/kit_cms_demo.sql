@@ -16,6 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Current Database: `kit_cms_demo`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `kit_cms_demo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `kit_cms_demo`;
+
+--
 -- Table structure for table `cms_block`
 --
 
@@ -487,7 +495,16 @@ CREATE TABLE `kit_file` (
   `status` varchar(250) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `parent_id` int(11) DEFAULT NULL,
+  `type` varchar(250) DEFAULT NULL,
+  `mime_type` varchar(250) DEFAULT NULL,
+  `item_category` varchar(250) DEFAULT NULL,
+  `item_class` varchar(250) DEFAULT NULL,
+  `item_id` varchar(250) DEFAULT NULL,
+  `publish_parent` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_71A69473727ACA70` (`parent_id`),
+  CONSTRAINT `FK_71A69473727ACA70` FOREIGN KEY (`parent_id`) REFERENCES `kit_file` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -497,7 +514,7 @@ CREATE TABLE `kit_file` (
 
 LOCK TABLES `kit_file` WRITE;
 /*!40000 ALTER TABLE `kit_file` DISABLE KEYS */;
-INSERT INTO `kit_file` VALUES (1,0,'render.jpg',0,'a:0:{}','valid','2012-02-13 16:41:07','2012-02-13 16:41:17'),(2,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:01:41','2012-02-15 12:02:18'),(3,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:04:17','2012-02-15 12:04:32'),(4,0,'Sans-titre-1.jpg',0,'a:0:{}','valid','2012-02-15 12:09:41','2012-02-15 12:10:07'),(5,0,'render (1).jpg',0,'a:0:{}','valid','2012-02-15 15:14:55','2012-02-15 15:15:00'),(6,0,'render (1).jpg',0,'a:0:{}','temp','2012-02-15 15:17:03','2012-02-15 15:17:03'),(7,0,'tools.jpg',0,'a:0:{}','valid','2012-02-15 15:17:08','2012-02-15 15:17:28'),(8,0,'splashOpenSource.jpg',0,'a:0:{}','valid','2012-02-15 15:20:24','2012-02-15 15:20:29');
+INSERT INTO `kit_file` VALUES (1,0,'render.jpg',0,'a:0:{}','valid','2012-02-13 16:41:07','2012-02-13 16:41:17',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:01:41','2012-02-15 12:02:18',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:04:17','2012-02-15 12:04:32',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,0,'Sans-titre-1.jpg',0,'a:0:{}','valid','2012-02-15 12:09:41','2012-02-15 12:10:07',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,0,'render (1).jpg',0,'a:0:{}','valid','2012-02-15 15:14:55','2012-02-15 15:15:00',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,0,'render (1).jpg',0,'a:0:{}','temp','2012-02-15 15:17:03','2012-02-15 15:17:03',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,0,'tools.jpg',0,'a:0:{}','valid','2012-02-15 15:17:08','2012-02-15 15:17:28',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,0,'splashOpenSource.jpg',0,'a:0:{}','valid','2012-02-15 15:20:24','2012-02-15 15:20:29',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `kit_file` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -633,4 +650,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-02-27 14:06:28
+-- Dump completed on 2012-04-18 13:28:02

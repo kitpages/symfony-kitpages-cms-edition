@@ -1,5 +1,5 @@
 {% autoescape false %}
-{% set img = data.root.media_mainImage|default('') %}
+{% set img = data.root.media_mainImage.0|default('') %}
 {% if img %}
 <div class="app-news-img">
     {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}

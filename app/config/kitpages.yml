@@ -50,10 +50,23 @@ kitpages_cms:
         default_twig: '::base.html.twig'
 
 kitpages_file:
-    data_dir: %kernel.root_dir%/data/bundle/kitpagesfile
-    public_prefix: data/bundle/kitpagesfile
-    base_url: %base_url%
-    entity_file_name_list:
-        default :
-            class: Kitpages\FileBundle\Entity\File
-            data_dir_prefix: /default
+    tmp_dir: %kernel.root_dir%/data/tmp
+    type_list:
+        image:
+            resize:
+                form: 'kit_file.image.resize.form'
+                form_twig: 'KitpagesFileBundle:ActionOnFile:Image/Resize/form.html.twig'
+                handler_form: 'kit_file.image.resize.form.handler'
+                library: 'imagine.gd'
+
+kitpages_file_system:
+    file_system_list:
+        kitpagesFile:
+#            amazon_s3:
+#                bucket_name: %kitpagesFile_amazons3_bucketname%
+#                key: %kitpagesFile_amazons3_key%
+#                secret_key: %kitpagesFile_amazons3_secretkey%
+            local:
+                directory_public: %kernel.root_dir%/../web
+                directory_private: %kernel.root_dir%
+                base_url: %base_url%
