@@ -5,6 +5,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Input\ArrayInput;
 
 class importDatabaseCommand extends ContainerAwareCommand
 {
@@ -63,7 +64,13 @@ EOT
         if (!$importFile) {
             $importFile = $dialog->ask($output, '<info>Import the demonstration files related in the database?</info> [<comment>true</comment>]:', 'true');
             if ($importFile == true)  {
-                $importFileCommand = $this->getApplication()->find('kitCmsDemo:importFile');
+                $importFileCommand = $this->getApplication()->find('kitFile:updateDatabase');
+                $arguments = array(
+                    'dataDir' => realpath(__DIR__."/../../../../app/dataInit/bundle/kitpagesfile/default"),
+                    '--q' => true,
+                    '--deleteDir' => true
+                );
+                $input = new ArrayInput($arguments);
                 $returnCode = $importFileCommand->run($input, $output);
             }
         }

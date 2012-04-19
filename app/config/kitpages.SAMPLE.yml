@@ -62,11 +62,7 @@ kitpages_file:
 kitpages_file_system:
     file_system_list:
         kitpagesFile:
-            amazon_s3:
-                bucket_name: %kitpagesFile_amazons3_bucketname%
-                key: %kitpagesFile_amazons3_key%
-                secret_key: %kitpagesFile_amazons3_secretkey%
-#            local:
-#                directory_public: %kernel.root_dir%/../web
-#                directory_private: %kernel.root_dir%
-#                base_url: %base_url%
+            local:
+                directory_public: %kernel.root_dir%/../web
+                directory_private: %kernel.root_dir%
+                base_url: %base_url%

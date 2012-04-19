@@ -1,6 +1,6 @@
 {% autoescape false %}
 <div class="app-block-standard [[cms:parameter:firstLastClass]] {{data.root.block_presentation|default('')}}">
-    {% set img = data.root.media_mainImage.0|default('') %}
+    {% set img = data.media.mainImage.0.default|default('') %}
     {% set imgPos = data.root.imagePosition|default('top') %}
 
     {% set youtubeId = data.root.youtubeId|default('') %}
@@ -13,7 +13,7 @@
         {% if (imgPos == "left") or (imgPos == "right") %}
             {% if img %}
                 {% if data.root.image_url|default('') %}<a href="{{data.root.image_url}}">{% endif %}
-                <img src="{{data.root.url_media_mainImage}}" class="app-block-img app-block-img-position-{{imgPos}}" style="display: block; float: {{imgPos}};"/>
+                <img src="{{img.url}}" class="app-block-img app-block-img-position-{{imgPos}}" style="display: block; float: {{imgPos}};"/>
                 {% if data.root.image_url|default('') %}</a>{% endif %}
             {% endif %}
         {% endif %}
@@ -27,7 +27,7 @@
         {% if (imgPos == "left") or (imgPos == "right") %}
             {% if img %}
                 {% if data.root.image_url|default('') %}<a href="{{data.root.image_url}}">{% endif %}
-                <img src="{{data.root.url_media_mainImage}}" class="app-block-img app-block-img-position-{{imgPos}}" style="display: block; float: {{imgPos}};"/>
+                <img src="{{img.url}}" class="app-block-img app-block-img-position-{{imgPos}}" style="display: block; float: {{imgPos}};"/>
                 {% if data.root.image_url|default('') %}</a>{% endif %}
             {% endif %}
         {% endif %}
@@ -47,14 +47,14 @@
     {% if imgPos == "top" %}
         {% if img %}
             {% if data.root.image_url|default('') %}<a href="{{data.root.image_url}}">{% endif %}
-            <img class="app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img" src="{{img.url}}"/>
             {% if data.root.image_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}
     {% if imgPos == "center" %}
         {% if img %}<div style="text-align: center;">
             {% if data.root.image_url|default('') %}<a href="{{data.root.image_url}}">{% endif %}
-            <img class="app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img" src="{{img.url}}"/>
             {% if data.root.image_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}
@@ -69,7 +69,7 @@
     {% if imgPos == "bottom" %}
         {% if img %}
             {% if data.root.image_url|default('') %}<a href="{{data.root.image_url}}">{% endif %}
-            <img class="app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img" src="{{img.url}}"/>
             {% if data.root.image_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}

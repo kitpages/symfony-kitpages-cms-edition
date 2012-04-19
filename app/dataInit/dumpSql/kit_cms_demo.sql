@@ -514,7 +514,7 @@ CREATE TABLE `kit_file` (
 
 LOCK TABLES `kit_file` WRITE;
 /*!40000 ALTER TABLE `kit_file` DISABLE KEYS */;
-INSERT INTO `kit_file` VALUES (1,0,'render.jpg',0,'a:0:{}','valid','2012-02-13 16:41:07','2012-02-13 16:41:17',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:01:41','2012-02-15 12:02:18',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:04:17','2012-02-15 12:04:32',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,0,'Sans-titre-1.jpg',0,'a:0:{}','valid','2012-02-15 12:09:41','2012-02-15 12:10:07',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,0,'render (1).jpg',0,'a:0:{}','valid','2012-02-15 15:14:55','2012-02-15 15:15:00',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,0,'render (1).jpg',0,'a:0:{}','temp','2012-02-15 15:17:03','2012-02-15 15:17:03',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,0,'tools.jpg',0,'a:0:{}','valid','2012-02-15 15:17:08','2012-02-15 15:17:28',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,0,'splashOpenSource.jpg',0,'a:0:{}','valid','2012-02-15 15:20:24','2012-02-15 15:20:29',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `kit_file` VALUES (1,0,'render.jpg',0,'a:0:{}','valid','2012-02-13 16:41:07','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','1',NULL),(2,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:01:41','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','7',NULL),(3,0,'render.jpg',0,'a:0:{}','valid','2012-02-15 12:04:17','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','8',NULL),(4,0,'Sans-titre-1.jpg',0,'a:0:{}','valid','2012-02-15 12:09:41','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','5',NULL),(5,0,'render (1).jpg',0,'a:0:{}','valid','2012-02-15 15:14:55','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','28',NULL),(7,0,'tools.jpg',0,'a:0:{}','valid','2012-02-15 15:17:08','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','30',NULL),(8,0,'splashOpenSource.jpg',0,'a:0:{}','valid','2012-02-15 15:20:24','2012-04-18 16:08:47',NULL,'image','image/jpeg',NULL,'KitpagesCmsBundle:Block','31',NULL);
 /*!40000 ALTER TABLE `kit_file` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -650,4 +650,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-04-18 13:28:02
+-- Dump completed on 2012-04-18 16:20:33

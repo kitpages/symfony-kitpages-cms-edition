@@ -32,11 +32,14 @@ b) import database
     php app/console kitCmsDemo:importDatabase
     answers to questions
 
-c) Modify parameters.yml
+c) Modify parameters.ini
     * run the command:
-        cp app/config/parameters.SAMPLE.yml app/config/parameters.yml
+        cp app/config/parameters.SAMPLE.ini app/config/parameters.ini
 
-    * edit parameters.yml
+    * run the command:
+        cp app/config/kitpages.SAMPLE.yml app/config/kitpages.yml
+
+    * edit parameters.ini
         modify the database information
         modify base_url
 

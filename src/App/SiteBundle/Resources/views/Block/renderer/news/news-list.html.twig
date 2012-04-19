@@ -1,9 +1,9 @@
 {% autoescape false %}
-{% set img = data.root.media_mainImage.0|default('') %}
+{% set img = data.media.mainImage.0.default|default('') %}
 {% if img %}
 <div class="app-news-img">
     {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
-    <img src="{{data.root.url_media_mainImage}}" />
+    <img src="{{img.url}}" />
     {% if data.root.block_url|default('') %}</a>{% endif %}
 </div>
 {% endif %}

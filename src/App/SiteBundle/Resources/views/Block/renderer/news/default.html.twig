@@ -1,6 +1,6 @@
 {% autoescape false %}
 <div class="app-block-standard app-block-news">
-    {% set img = data.root.media_mainImage.0|default('') %}
+    {% set img = data.media.mainImage.0.default|default('') %}
     {% set imgPos = data.root.imagePosition|default('top') %}
 
     {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
@@ -13,14 +13,14 @@
     {% if imgPos == "top" %}
         {% if img %}
             {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
-            <img class="app-block-img-{{imgPos}} app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img-{{imgPos}} app-block-img" src="{{img.url}}"/>
             {% if data.root.block_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}
     {% if imgPos == "center" %}
         {% if img %}<div style="text-align: center;">
             {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
-            <img class="app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img" src="{{img.url}}"/>
             {% if data.root.block_url|default('') %}</a>{% endif %}
             </div>
         {% endif %}
@@ -30,7 +30,7 @@
     {% if (imgPos == "left") or (imgPos == "right") %}
         {% if img %}
             {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
-            <img class="app-block-img-{{imgPos}} app-block-img" src="{{data.root.url_media_mainImage}}" style="display: block; float: {{imgPos}};"/>
+            <img class="app-block-img-{{imgPos}} app-block-img" src="{{img.url}}" style="display: block; float: {{imgPos}};"/>
             {% if data.root.block_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}
@@ -44,7 +44,7 @@
     {% if imgPos == "bottom" %}
         {% if img %}
             {% if data.root.block_url|default('') %}<a href="{{data.root.block_url}}">{% endif %}
-            <img class="app-block-img-{{imgPos}} app-block-img" src="{{data.root.url_media_mainImage}}"/>
+            <img class="app-block-img-{{imgPos}} app-block-img" src="{{img.url}}"/>
             {% if data.root.block_url|default('') %}</a>{% endif %}
         {% endif %}
     {% endif %}
