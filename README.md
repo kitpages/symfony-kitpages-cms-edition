@@ -23,16 +23,19 @@ A backup of a site demo is also available
 ---------------
 
 a) Install the Vendor Libraries
+
     * run the command:
         php bin/vendors update
 
 b) import database
+
     * You must create a database.
     * run the command:
         php app/console kitCmsDemo:importDatabase
         answers to questions
 
 c) Modify parameters.ini
+
     * run the command:
         cp app/config/parameters.SAMPLE.ini app/config/parameters.ini
 
@@ -44,6 +47,7 @@ c) Modify parameters.ini
         modify base_url
 
 d) install assets
+
     * run the command:
         php app/console assets:install web
 
