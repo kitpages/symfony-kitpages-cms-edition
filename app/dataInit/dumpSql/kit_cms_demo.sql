@@ -16,14 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `kit_cms_demo`
---
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `kit_cms_demo` /*!40100 DEFAULT CHARACTER SET latin1 */;
-
-USE `kit_cms_demo`;
-
---
 -- Table structure for table `cms_block`
 --
 
