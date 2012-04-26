@@ -8,7 +8,8 @@ app/sessions/sess_*
 build/
 vendor/
 deps.lock
-app/config/parameters.yml
+app/config/parameters.ini
+app/config/kitpages.yml
 *~
 # IDE
 /nbproject/
