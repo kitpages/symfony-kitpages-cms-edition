@@ -27,14 +27,7 @@ a) Install the Vendor Libraries
     * run the command:
         php bin/vendors update
 
-b) import database
-
-    * You must create a database.
-    * run the command:
-        php app/console kitCmsDemo:importDatabase
-        answers to questions
-
-c) Modify parameters.ini
+b) Modify parameters.ini
 
     * run the command:
         cp app/config/parameters.SAMPLE.ini app/config/parameters.ini
@@ -45,6 +38,13 @@ c) Modify parameters.ini
     * edit parameters.ini
         modify the database information
         modify base_url
+
+c) import database
+
+    * You must create a database.
+    * run the command:
+        php app/console kitCmsDemo:importDatabase
+        answers to questions
 
 d) install assets
 
