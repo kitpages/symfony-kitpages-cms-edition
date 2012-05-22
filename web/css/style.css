@@ -9,21 +9,6 @@
     text-align:center;
 }
 
-/* Select language */
-.app-header-language {
-    float:right;
-}
-.app-header-language li {
-    display:inline;
-    opacity:0.6;
-}
-
-.app-langage-selected{
-    opacity:1!important;
-}
-.app-header-language  li:hover{
-    opacity:1;
-}
 
 .app-header-connection {
     float:right;
@@ -83,9 +68,6 @@ a img{
     width: 640px;
     padding: 8px;
     margin-bottom:15px;
-    background-color: #FFF;
-    box-shadow: 1px 1px 5px 3px rgba(128, 128, 128, 0.7);
-    -moz-box-shadow: 1px 1px 5px 3px rgba(128, 128, 128, 0.7);
 }
 
 
@@ -119,8 +101,7 @@ div#ihqs_contact_contact_form > div {
 }
 
 input:invalid, textarea:invalid {
-    border-radius: 0px;
-    box-shadow: none;
+
 }
 
 
