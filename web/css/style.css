@@ -1,4 +1,7 @@
-
+a {
+    color: #C6012C;
+    text-decoration: none;
+}
 
 /*
 * Header
@@ -27,7 +30,10 @@ a img{
 
 .app-logo-cms{
     float:left;
+    padding: 15px 20px 8px;
+    font-size: 20px;
 }
+.app-logo-cms a{ color: #c6012c; }
 
 
 
@@ -213,10 +219,7 @@ input:invalid, textarea:invalid {
     font-weight: bold;
     height: 27px;
     margin: 10px 0 20px 0px;
-    text-transform: uppercase;
     width: 126px;
-    border: medium none;
-    background-color: #E3E3E3;
     color: #000000;
 }
 
@@ -224,7 +227,9 @@ input:invalid, textarea:invalid {
     background-color: #3B3A3F;
 }
 
-
+.layout-footer a{
+    color: #C6012C;
+}
 
 
 /* modif for button add in the navigation */
