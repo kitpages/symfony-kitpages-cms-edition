@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<div class="layout-home-column">
+<div class="layout-home-column well">
     <h2 class="app-news-title">{{ ('News') | trans }}</h2>
     {% render 'KitpagesCmsBundle:Zone:widget' with {
         'slug': languageManager.currentLanguage|default('en') ~ '-news',

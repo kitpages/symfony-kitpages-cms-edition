@@ -10,7 +10,7 @@
 <div class="layout-inside-main">
     <h1>Nous contacter</h1>
     {% render 'KitpagesCmsBundle:Zone:widget' with {'slug': languageManager.currentLanguage|default('en') ~ '-contact-intro'} %}
-    <div class="app-contact-widget app-block-standard app-block-style-black">
+    <div class="app-contact-widget app-block-standard app-block-style-black well">
         {% render "IHQSContactBundle:Contact:form" %}
     </div>
 
