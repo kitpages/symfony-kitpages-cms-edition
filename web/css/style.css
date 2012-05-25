@@ -1,4 +1,7 @@
-
+a {
+    color: #C6012C;
+    text-decoration: none;
+}
 
 /*
 * Header
@@ -9,21 +12,6 @@
     text-align:center;
 }
 
-/* Select language */
-.app-header-language {
-    float:right;
-}
-.app-header-language li {
-    display:inline;
-    opacity:0.6;
-}
-
-.app-langage-selected{
-    opacity:1!important;
-}
-.app-header-language  li:hover{
-    opacity:1;
-}
 
 .app-header-connection {
     float:right;
@@ -42,7 +30,10 @@ a img{
 
 .app-logo-cms{
     float:left;
+    padding: 15px 20px 8px;
+    font-size: 20px;
 }
+.app-logo-cms a{ color: #c6012c; }
 
 
 
@@ -83,9 +74,6 @@ a img{
     width: 640px;
     padding: 8px;
     margin-bottom:15px;
-    background-color: #FFF;
-    box-shadow: 1px 1px 5px 3px rgba(128, 128, 128, 0.7);
-    -moz-box-shadow: 1px 1px 5px 3px rgba(128, 128, 128, 0.7);
 }
 
 
@@ -119,8 +107,7 @@ div#ihqs_contact_contact_form > div {
 }
 
 input:invalid, textarea:invalid {
-    border-radius: 0px;
-    box-shadow: none;
+
 }
 
 
@@ -232,10 +219,7 @@ input:invalid, textarea:invalid {
     font-weight: bold;
     height: 27px;
     margin: 10px 0 20px 0px;
-    text-transform: uppercase;
     width: 126px;
-    border: medium none;
-    background-color: #E3E3E3;
     color: #000000;
 }
 
@@ -243,7 +227,9 @@ input:invalid, textarea:invalid {
     background-color: #3B3A3F;
 }
 
-
+.layout-footer a{
+    color: #C6012C;
+}
 
 
 /* modif for button add in the navigation */
