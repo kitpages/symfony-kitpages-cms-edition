@@ -25,15 +25,12 @@ A backup of a site demo is also available
 a) Install the Vendor Libraries
 
     * run the command:
-        php bin/vendors update
+        php bin/vendors install
 
 b) Modify parameters.ini
 
     * run the command:
         cp app/config/parameters.SAMPLE.ini app/config/parameters.ini
-
-    * run the command:
-        cp app/config/kitpages.SAMPLE.yml app/config/kitpages.yml
 
     * edit parameters.ini
         modify the database information
@@ -41,7 +38,7 @@ b) Modify parameters.ini
 
 c) import database
 
-    * You must create a database.
+    * You must create the database.
     * run the command:
         php app/console kitCmsDemo:importDatabase
         answers to questions

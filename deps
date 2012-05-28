@@ -40,8 +40,7 @@
 [SensioFrameworkExtraBundle]
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
-;    version=origin/2.0
-    version=638f545b7020b9e9d5944a7e3167f60ed848250d
+    version=origin/2.0
 
 [JMSSecurityExtraBundle]
     git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
@@ -94,12 +93,12 @@
 [KitpagesCmsBundle]
     git=http://github.com/kitpages/KitpagesCmsBundle.git
     target=Kitpages/CmsBundle
-    version=origin/v2.0
+    version=v2.0.0
 
 [KitpagesFileBundle]
     git=http://github.com/kitpages/KitpagesFileBundle.git
     target=Kitpages/FileBundle
-    version=origin/multiUpload
+    version=v2.0.0
 
 [KitpagesCacheControlBundle]
     git=http://github.com/kitpages/KitpagesCacheControlBundle.git
