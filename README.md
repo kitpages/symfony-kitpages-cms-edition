@@ -54,12 +54,12 @@ d) install assets
 2) publish all
 -----------------------
     * type the following URL
-        http://site/cms/nav/publishAll
+        http://example.com/cms/nav/publishAll
 
     * Sign in
         login:admin
         pass:admin
 
 
-The site is accessible!!  http://site
+Your website should be accessible on  http://example.com
 
