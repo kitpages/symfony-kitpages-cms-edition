@@ -51,6 +51,7 @@ nav.layout-main-navigation .app-navigation-main li{
 } 
 
 nav.layout-main-navigation .app-navigation-main > li > a {
+    position: relative;
     font-size: 14px;
     padding: 13px 15px;
     text-shadow: none;
@@ -60,7 +61,18 @@ nav.layout-main-navigation .app-navigation-main > li > a {
     text-decoration: none;
 }
 nav.layout-main-navigation .app-navigation-main > li > a:hover{
-    color: #999;
+    color: #333;
+}
+nav.layout-main-navigation .app-navigation-main > li.kit-cms-select > a {
+    color: #800;
+}
+.app-navigation-level2 li > a {
+    display: block;
+    position: relative;
+    color: #833;
+}
+.app-navigation-level2 li.kit-cms-select > a {
+    color: #F00;
 }
 
 /* Select language */
