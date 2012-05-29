@@ -93,12 +93,10 @@
 [KitpagesCmsBundle]
     git=http://github.com/kitpages/KitpagesCmsBundle.git
     target=Kitpages/CmsBundle
-    version=v2.0.0
 
 [KitpagesFileBundle]
     git=http://github.com/kitpages/KitpagesFileBundle.git
     target=Kitpages/FileBundle
-    version=v2.0.0
 
 [KitpagesCacheControlBundle]
     git=http://github.com/kitpages/KitpagesCacheControlBundle.git
