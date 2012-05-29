@@ -34,6 +34,7 @@ twig:
             type: service
             id: app_language.manager
         base_url: "%base_url%"
+        google_analytics_ua: "%google_analytics_ua%"
     exception_controller:  App\SiteBundle\Controller\ExceptionController::showAction
 
 # Assetic Configuration
