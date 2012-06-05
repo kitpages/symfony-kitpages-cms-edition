@@ -8,6 +8,7 @@ app/sessions/sess_*
 build/
 vendor/
 app/config/parameters.ini
+app/config/kitpages.yml
 *~
 # IDE
 /nbproject/
