@@ -1,23 +1,15 @@
 Kitpages Cms Edition
 ========================
 
+# WARNING ! you should not use this distribution anymore
+
+You should use the distribution located at this URL
+[https://github.com/kitpages/kitpages-cms-edition](https://github.com/kitpages/kitpages-cms-edition)
+
+# old documentation
+
 This document contains information on how to install KitpagesCms Edition.
 KitpagesCms Edition is based on Symfony Standard edition with additional the bundle to use the kitpages Cms
-A backup of a site demo is also available
-
-    Kitpages bundles added
-    - KitpagesCmsBundle
-    - KitpagesFileBundle
-    - KitpagesCacheControlBundle
-    - KitpagesSimpleCacheBundle
-    - KitpagesRedirectBundle
-    - KitpagesUtilBundle
-
-    Other bundles
-    - DoctrineExtensions
-    - DoctrineExtensionsBundle
-    - FOSUserBundle
-    - IHQSContactBundle
 
 1) Installation
 ---------------
